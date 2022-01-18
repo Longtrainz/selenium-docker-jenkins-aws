@@ -20,7 +20,7 @@ pipeline {
                     //sh
 			        bat "docker login --username=${user} --password=${pass}"
 			        bat "docker push mcfly2786/docker-selenium:latest"
-			        bat "docker push mcfly2786/docker-selenium:${BUILD_NUMBER}"
+			        bat "docker push mcfly2786/docker-selenium:'${BUILD_NUMBER}'"
 			    }
             }
         }
