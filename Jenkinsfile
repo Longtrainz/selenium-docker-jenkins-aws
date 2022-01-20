@@ -11,7 +11,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh
-                bat "docker build -t mcfly2786/docker-selenium ."
+                bat "docker build -t mcfly2786/docker-selenium -t mcfly2786/docker-selenium:${BUILD_NUMBER} ."
             }
         }
         stage('Push Image') {
